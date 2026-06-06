@@ -1321,5 +1321,51 @@ alt="LAWASTOTO">
       renderResults();
     }, 30*60*1000);
   </script>
+  <script>
+  // 1. Blokir Klik Kanan (Context Menu)
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+    alert("no no no ya jangan mencurii");
+  });
+
+  // 2. Blokir Tombol F12, Ctrl+U, Ctrl+Shift+I, Ctrl+Shift+J, dan Ctrl+S
+  document.addEventListener('keydown', function(e) {
+    
+    // Blokir F12
+    if (e.key === "F12" || e.keyCode === 123) {
+      e.preventDefault();
+      alert("no no no ya jangan mencurii");
+      return false;
+    }
+
+    // Blokir Kombinasi Ctrl + U (View Source)
+    if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.keyCode === 85)) {
+      e.preventDefault();
+      alert("no no no ya jangan mencurii");
+      return false;
+    }
+
+    // Blokir Kombinasi Ctrl + Shift + I (Inspect Element)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.keyCode === 73)) {
+      e.preventDefault();
+      alert("no no no ya jangan mencurii");
+      return false;
+    }
+
+    // Blokir Kombinasi Ctrl + Shift + J (Console)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'j' || e.key === 'J' || e.keyCode === 74)) {
+      e.preventDefault();
+      alert("no no no ya jangan mencurii");
+      return false;
+    }
+
+    // Blokir Kombinasi Ctrl + S (Save Page)
+    if (e.ctrlKey && (e.key === 's' || e.key === 'S' || e.keyCode === 83)) {
+      e.preventDefault();
+      alert("no no no ya jangan mencurii");
+      return false;
+    }
+  });
+</script>
 </body>
 </html>
