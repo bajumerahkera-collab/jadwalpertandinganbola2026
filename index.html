@@ -1619,5 +1619,16 @@
       renderResults();
     }, 30*60*1000);
   </script>
+  <audio id="bg-music" loop>
+  <source src="https://mp3tourl.com/audio/1781041557255-5ed2746b-524e-4c3f-8909-2ca64a530184.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // Musik akan mulai berputar otomatis begitu user klik di mana saja dalam website
+  document.addEventListener('click', function() {
+    var audio = document.getElementById('bg-music');
+    audio.play();
+  }, { once: true }); // { once: true } memastikan fungsi ini cuma jalan sekali klik pertama
+</script>
 </body>
 </html>
